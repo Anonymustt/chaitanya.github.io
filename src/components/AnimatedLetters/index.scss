@@ -1,0 +1,40 @@
+.text-animate{
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+}
+.text-animate-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+  
+    &:hover {
+      animation: rubberband 1s;
+      color: #ffffff;
+    }
+  
+    @keyframes rubberband {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1.25) translateX(0);
+      }
+      40% {
+        transform: scale(0.75) translateX(0);
+      }
+      60% {
+        transform: scale(1.15) translateX(0);
+      }
+      80% {
+        transform: scale(0.95) translateX(0);
+      }
+      100% {
+        transform: scale(1) translateX(0);
+      }
+    }
+  }
+  
+
